@@ -6,6 +6,8 @@ CodexBar is a GTK tray control surface for a local OpenClaw stack. This export i
 - the `runtime-governor` OpenClaw plugin
 - systemd user unit templates for the tray, scheduled smoke tests, and usage snapshots
 
+Inspired by [steipete/CodexBar](https://github.com/steipete/CodexBar), which is a macOS menu bar app for provider visibility and usage tracking. This repo is a separate Ubuntu/OpenClaw-focused implementation.
+
 ## Features
 
 - GTK tray control surface for local OpenClaw operations
