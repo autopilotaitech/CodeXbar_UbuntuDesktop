@@ -1,92 +1,69 @@
 # TODO
 
-## Next Priority
+## Highest Priority
 
-1. Daemon diagnostics panel
-Show structured NemoClaw and local OpenClaw fields directly:
-- connected/running state
-- server URL
-- version
-- autostart
-- last successful action
+1. Packaging and install flow
+- add a real installer for `codexbar-linux.py`, systemd user units, and the `runtime-governor` plugin
+- add uninstall and upgrade paths
+- document expected Ubuntu dependencies clearly
 
-2. Alert UX polish
-Improve the operator flow around alerts:
-- visible mute countdown
-- explicit acknowledged state in UI
-- separate warning vs critical tone rules
-- configurable cooldown instead of fixed default
+2. Background worker split
+- move more non-UI work out of the GTK tray process
+- isolate usage aggregation, smoke orchestration, alert evaluation, and event compaction
+- keep the tray focused on rendering and operator actions
 
-3. Event browser expansion
-The event center now has filters and detail view. Next steps:
-- search
-- date/time range
-- export selected events
-- copy raw event JSON
+3. Test harness
+- add repeatable checks for smoke tests, restore-point create/restore, alert dedupe, and event retention
+- make it easy to run a “known good” local verification pass before release
 
-4. Background worker split
-Move more non-UI work out of the GTK process:
-- alert evaluation
-- event compaction
-- smoke orchestration
-- incident summarization
+## Runtime and Policy
 
-## Runtime / Policy
+4. Policy violation console
+- show expected lane vs actual lane for top-level and sub-agent runs
+- surface strict/advisory policy state clearly
+- make route drift obvious when fallbacks or overrides happen
 
-5. Policy violation console
-Show when actual route != expected route, with:
-- task type
-- selected lane
-- actual lane
-- reason for drift
-- strict vs advisory policy state
+5. Fallback and failover analytics
+- track fallback frequency
+- show provider failover chains
+- highlight degraded periods by provider
 
-6. Fallback-hop analytics
-Track and display:
-- fallback frequency
-- provider failover chains
-- degraded periods by provider
+6. Sub-agent drilldown
+- show parent lane, child lane, task type, and sidecar role
+- make orchestrator vs worker behavior visible in one place
 
-7. Sub-agent runtime drilldown
-Surface orchestrator vs worker behavior more clearly:
-- parent lane
-- child lane
-- sidecar allowed/not allowed
-- spawned tool count
+## Ops UX
 
-## Packaging / Repo
+7. Event browser expansion
+- add search
+- add date/time range filters
+- allow copying raw event JSON
+- allow exporting filtered event sets
 
-8. Install script
-Add a clean installer for:
-- `codexbar-linux.py`
-- systemd units
-- runtime-governor plugin
+8. Alert UX polish
+- show visible mute countdown
+- show acknowledged state in the UI
+- separate warning vs critical styling more clearly
+- make alert cooldown configurable
 
-9. Config templates
-Ship example local config files instead of relying on live defaults:
-- daemon config example
-- pricing registry example
-- policy example
+9. Daemon diagnostics
+- expand structured local OpenClaw and NemoClaw fields
+- show last successful action and last failure reason
+- improve recovery guidance inside the tray
 
-10. Release hygiene
-Add:
-- license
-- changelog
-- version tag strategy
-- release notes template
+## Repo and Release
 
-## Nice To Have
+10. Example config templates
+- ship sample daemon config
+- ship sample pricing registry
+- ship sample routing policy
 
-11. Public demo assets
-Add screenshots and a short demo GIF/video.
+11. Release hygiene
+- add a changelog
+- define version/tag strategy
+- add release notes template
 
-12. Theming pass
-Offer one cleaner light theme and one stronger dark ops theme.
-
-13. Test harness
-Add reproducible local checks for:
-- smoke tests
-- restore-point creation/restore
-- event retention
-- alert dedupe
-
+12. Public demo assets
+- add more polished screenshots
+- add a short demo GIF or video
+- add a quick-start install section to the README
