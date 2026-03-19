@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh CodexBar usage snapshot periodically
+
+[Timer]
+OnBootSec=90
+OnUnitActiveSec=5min
+Persistent=true
+Unit=codexbar-usage-snapshot.service
+
+[Install]
+WantedBy=timers.target

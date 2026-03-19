@@ -1,0 +1,14 @@
+{
+  "name": "@will/runtime-governor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.13"
+  }
+}

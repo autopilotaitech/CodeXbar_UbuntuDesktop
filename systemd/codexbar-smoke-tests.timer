@@ -1,0 +1,11 @@
+[Unit]
+Description=Run CodexBar smoke tests on a schedule
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=30min
+Persistent=true
+Unit=codexbar-smoke-tests.service
+
+[Install]
+WantedBy=timers.target

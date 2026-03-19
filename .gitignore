@@ -1,0 +1,22 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.venv/
+node_modules/
+dist/
+
+# Never publish local runtime state
+.openclaw/
+.codex/
+codexbar-state.json
+codexbar-daemons.json
+codexbar-events.jsonl
+codexbar-usage-ledger-cache.json
+runtime-governor-audit.jsonl
+restore-points/
+
+# Local logs and notes
+*.log
+workspace/
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=CodexBar — OpenClaw LLM status monitor
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/systemctl --user import-environment DISPLAY DBUS_SESSION_BUS_ADDRESS XAUTHORITY
+ExecStart=/usr/bin/python3 %h/.local/bin/codexbar-linux.py tray
+Restart=on-failure
+RestartSec=8
+
+[Install]
+WantedBy=graphical-session.target

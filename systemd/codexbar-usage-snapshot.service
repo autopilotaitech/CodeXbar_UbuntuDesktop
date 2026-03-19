@@ -1,0 +1,8 @@
+[Unit]
+Description=CodexBar usage snapshot refresher
+After=openclaw-gateway.service network-online.target
+Wants=openclaw-gateway.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.local/bin/codexbar-linux.py usage-snapshot

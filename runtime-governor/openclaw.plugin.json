@@ -1,0 +1,33 @@
+{
+  "id": "runtime-governor",
+  "name": "Runtime Governor",
+  "description": "Enforce CodexBar routing policy at runtime before model resolution, while preserving explicit user overrides.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "statePath": {
+        "type": "string"
+      },
+      "auditPath": {
+        "type": "string"
+      },
+      "logDecisions": {
+        "type": "boolean"
+      }
+    },
+    "uiHints": {
+      "statePath": {
+        "label": "Policy state path",
+        "placeholder": "~/.openclaw/codexbar-state.json"
+      },
+      "auditPath": {
+        "label": "Audit log path",
+        "placeholder": "~/.openclaw/runtime-governor-audit.jsonl"
+      },
+      "logDecisions": {
+        "label": "Log routing decisions"
+      }
+    }
+  }
+}
