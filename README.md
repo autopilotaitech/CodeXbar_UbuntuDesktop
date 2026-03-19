@@ -6,6 +6,32 @@ CodexBar is a GTK tray control surface for a local OpenClaw stack. This export i
 - the `runtime-governor` OpenClaw plugin
 - systemd user unit templates for the tray, scheduled smoke tests, and usage snapshots
 
+## Screenshots
+
+### Overview
+
+The tray is built as a compact local control surface: routing, live status, spend, account state, daemons, and ops history in one popup.
+
+![CodeXbar Overview](screenshots/overview.png)
+
+### Models
+
+Routing presets, primary lane selection, fallback chain management, and per-agent lane control live in the `Models` panel.
+
+![CodeXbar Models](screenshots/models.png)
+
+### Daemons
+
+Local OpenClaw and NemoClaw can be launched, restarted, opened, and placed on autostart directly from the tray.
+
+![CodeXbar Daemons](screenshots/daemons.png)
+
+### Ops
+
+The `Ops` view exposes scheduled smoke tests, restore points, alerts, and the event center for day-to-day runtime auditing.
+
+![CodeXbar Ops](screenshots/ops.png)
+
 ## What Is Safe In This Repo
 
 This repo is prepared to avoid publishing personal local state:
@@ -67,4 +93,3 @@ git commit -m "Initial sanitized CodeXbar export"
 git remote add origin git@github.com:YOURNAME/CodeXbar_UbuntuDesktop.git
 git push -u origin main
 ```
-
