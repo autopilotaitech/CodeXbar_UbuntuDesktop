@@ -6,6 +6,15 @@ CodexBar is a GTK tray control surface for a local OpenClaw stack. This export i
 - the `runtime-governor` OpenClaw plugin
 - systemd user unit templates for the tray, scheduled smoke tests, and usage snapshots
 
+## Features
+
+- GTK tray control surface for local OpenClaw operations
+- lane switching with primary model, fallback chain, and per-agent routing controls
+- runtime governor plugin for policy-aware model selection
+- daemon controls for local OpenClaw and NemoClaw/OpenShell flows
+- scheduled smoke tests, usage snapshots, restore points, and event history
+- sanitized repo layout for publishing without local secrets or session state
+
 ## Screenshots
 
 ### Overview
@@ -67,6 +76,10 @@ Do not add any of these local files:
 - `systemd/`
 - `docs/PUBLISHING.md`
 
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 ## Install Notes
 
 1. Copy `codexbar/codexbar-linux.py` to `~/.local/bin/codexbar-linux.py`
@@ -81,15 +94,6 @@ systemctl --user enable --now codexbar-smoke-tests.timer
 systemctl --user enable --now codexbar-usage-snapshot.timer
 ```
 
-## GitHub
+## Publishing Notes
 
-To publish:
-
-```bash
-cd ~/Documents/github/CodeXbar_UbuntuDesktop
-git branch -M main
-git add .
-git commit -m "Initial sanitized CodeXbar export"
-git remote add origin git@github.com:YOURNAME/CodeXbar_UbuntuDesktop.git
-git push -u origin main
-```
+Sanitized screenshots live in `screenshots/`. Extra publishing guidance lives in `docs/PUBLISHING.md`.
